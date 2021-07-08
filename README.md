@@ -1,6 +1,6 @@
 # Password Generator CLI Tool
 
-A simple password generator CLI tool written in TypeScript[https://www.typescriptlang.org/] and Node.JS[https://nodejs.org/].
+A simple password generator CLI tool written in [TypeScript](https://www.typescriptlang.org/) and [Node.JS](https://nodejs.org/).
 
 ## Install dependencies.
 ```yarn install```
