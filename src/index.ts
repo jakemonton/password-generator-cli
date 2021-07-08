@@ -1,3 +1,4 @@
+#! /usr/bin/env node 
 import { generatePassword } from './generator';
 import { Command } from 'commander';
 import chalk from 'chalk';

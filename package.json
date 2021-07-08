@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "A simple password generator CLI build with Node.JS and TypeScript",
   "main": "dist/index.js",
+  "preferGlobal": true,
+  "bin": "./dist/index.js",
   "author": "Jake Monton",
   "license": "MIT",
   "scripts": {
