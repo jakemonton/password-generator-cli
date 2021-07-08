@@ -8,8 +8,8 @@ export const generatePassword = (options: PasswordOptions) => {
   let chars = ALPHABET;
   let password = '';
 
-  options.hasNumbers ? (chars += NUMBERS) : ''
-  options.hasSymbols ? (chars += SYMBOLS) : ''
+  options.hasNumbers ? (chars += NUMBERS) : '';
+  options.hasSymbols ? (chars += SYMBOLS) : '';
 
   // generate new password.
   for (let i = 0; i < options.length; i++) {
