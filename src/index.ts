@@ -4,14 +4,15 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import clipboardy from 'clipboardy';
 
-const log = console.log;
+const { log } = console;
 
+// Instantiate commander.
 const program = new Command();
 
 // Set version and description.
 program
   .version('1.0.0')
-  .description('Password Generator CLI')
+  .description('Password Generator CLI tool')
 
 // Set options.
 program
@@ -39,10 +40,12 @@ const options: PasswordOptions = {
   save
 };
 
+// Generate a new password.
 const generatedPassword: string = generatePassword(options);
 
 // Copy to clipboard.
 clipboardy.writeSync(generatedPassword);
 
+// Log info.
 log(chalk.blue.bold('Generated Password: ' + chalk.yellow.underline.bold(generatedPassword)));
 log(chalk.green.bold('Password copied to clipboard.'));
