@@ -4,5 +4,6 @@ type PasswordOptions = {
   lowercase?: boolean;
   hasNumbers?: boolean;
   hasSymbols?: boolean;
+  ambiguousSymbols?: boolean;
   save?: string;
 }

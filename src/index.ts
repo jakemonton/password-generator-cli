@@ -3,6 +3,7 @@ import { generatePassword } from './generator';
 import { Command } from 'commander';
 import chalk from 'chalk';
 import clipboardy from 'clipboardy';
+import { SYMBOLS, AMBIGUOUS_SYMBOLS } from './utils/constants';
 
 const { log } = console;
 
@@ -17,8 +18,9 @@ program
 // Set options.
 program
   .option('-l, --length <number>', 'Length of the password', '8')
-  .option('-nn, --no-numbers', 'Exclude numbers in password')
-  .option('-ns, --no-symbols', 'Exclude symbols in password')
+  .option('-nn, --no-numbers', 'Exclude numbers')
+  .option('-ns, --no-symbols', `Exclude symbols (e.g. ${SYMBOLS})`)
+  .option('-as, --ambiguous-symbols', `Include ambiguous symbols. (e.g. ${AMBIGUOUS_SYMBOLS})`, false)
   .option('-up, --uppercase', 'All characters in uppercase', false)
   .option('-up, --lowercase', 'All characters in lowercase', false)
   .option('-s, --save <filename>', 'Save password to file')
@@ -30,6 +32,7 @@ const {
   lowercase,
   numbers,
   symbols,
+  ambiguousSymbols,
   save
 } = program.opts();
 
@@ -39,6 +42,7 @@ const options: PasswordOptions = {
   lowercase,
   hasNumbers: numbers,
   hasSymbols: symbols,
+  ambiguousSymbols,
   save
 };
 

@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import os from 'os';
 import chalk from 'chalk';
-import { ALPHABET, NUMBERS, SYMBOLS, UPPERCASE_ALPHABET, LOWERCASE_ALPHABET } from './utils/constants';
+import { NUMBERS, SYMBOLS, UPPERCASE_ALPHABET, LOWERCASE_ALPHABET, AMBIGUOUS_SYMBOLS } from './utils/constants';
 
 export const generatePassword = (options: PasswordOptions) => {
-  let chars = ALPHABET;
+  let chars = LOWERCASE_ALPHABET + UPPERCASE_ALPHABET;
   let password = '';
 
   if (options.uppercase && !options.lowercase) {
@@ -16,6 +16,7 @@ export const generatePassword = (options: PasswordOptions) => {
 
   options.hasNumbers ? (chars += NUMBERS) : '';
   options.hasSymbols ? (chars += SYMBOLS) : ''; 
+  options.hasSymbols && options.ambiguousSymbols ? (chars += AMBIGUOUS_SYMBOLS) : '';
 
   // generate new password.
   for (let i = 0; i < options.length; i++) {
