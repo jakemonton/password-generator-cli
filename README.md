@@ -3,10 +3,10 @@
 A simple password generator CLI tool written in [TypeScript](https://www.typescriptlang.org/) and [Node.JS](https://nodejs.org/).
 The newly generated password is copied to clipboard automatically.
 
-## Install dependencies.
+## Install dependencies
 ```yarn install```
 
-## Start app.
+## Start app
 ```yarn start```
 
 ## Generating a password
@@ -29,7 +29,7 @@ The newly generated password is copied to clipboard automatically.
 ### Generating a password with no symbols.
 ```password-generator --no-symbols```
 
-### Generating a password including ambiguous symbols. Note: This only works if `--no-symbols` is `false`.
+### Generating a password including ambiguous symbols. *Note: This only works if `--no-symbols` is `false`*.
 ```password-generator --ambiguous-symbols```
 
 ### Store password to a file.
