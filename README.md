@@ -9,6 +9,8 @@ The newly generated password is copied to clipboard automatically.
 ## Start app.
 ```yarn start```
 
+## Generating a password
+
 ### Generating a password using all the defaults.
 ```password-generator```
 
