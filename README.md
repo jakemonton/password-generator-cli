@@ -9,26 +9,26 @@ The newly generated password is copied to clipboard automatically.
 ## Start app.
 ```yarn start```
 
-## Generating a password using all the defaults.
+### Generating a password using all the defaults.
 ```password-generator```
 
-## Generating a password with a specific length.
+### Generating a password with a specific length.
 ```password-generator --length <length>```
 
-## Generating a password with uppercases only.
+### Generating a password with uppercases only.
 ```password-generator --uppercase```
 
-## Generating a password with lowercases only.
-```password-generator --lowecase```
+### Generating a password with lowercases only.
+```password-generator --lowercase```
 
-## Generating a password with no numbers.
+### Generating a password with no numbers.
 ```password-generator --no-numbers```
 
-## Generating a password with no symbols.
+### Generating a password with no symbols.
 ```password-generator --no-symbols```
 
-## Generating a password including ambiguous symbols. Note: This only works if `--no-symbols` is `false`.
+### Generating a password including ambiguous symbols. Note: This only works if `--no-symbols` is `false`.
 ```password-generator --ambiguous-symbols```
 
-## Store password to a file.
+### Store password to a file.
 ```password-generator --save <filename>```
