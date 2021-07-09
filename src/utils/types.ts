@@ -1,8 +1,8 @@
 type PasswordOptions = {
   length: number;
-  uppercase?: false;
-  lowercase?: false;
-  hasNumbers?: true;
-  hasSymbols?: true;
-  save?: false;
+  uppercase?: boolean;
+  lowercase?: boolean;
+  hasNumbers?: boolean;
+  hasSymbols?: boolean;
+  save?: string;
 }

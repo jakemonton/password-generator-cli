@@ -1,12 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
-import { ALPHABET, NUMBERS, SYMBOLS } from './utils/constants';
 import chalk from 'chalk';
+import { ALPHABET, NUMBERS, SYMBOLS, UPPERCASE_ALPHABET, LOWERCASE_ALPHABET } from './utils/constants';
 
 export const generatePassword = (options: PasswordOptions) => {
   let chars = ALPHABET;
   let password = '';
+
+  if (options.uppercase && !options.lowercase) {
+    chars = UPPERCASE_ALPHABET;
+  } else if (options.lowercase && !options.uppercase) {
+    chars = LOWERCASE_ALPHABET;
+  }
 
   options.hasNumbers ? (chars += NUMBERS) : '';
   options.hasSymbols ? (chars += SYMBOLS) : ''; 

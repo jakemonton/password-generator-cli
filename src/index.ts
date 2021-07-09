@@ -19,6 +19,8 @@ program
   .option('-l, --length <number>', 'Length of the password', '8')
   .option('-nn, --no-numbers', 'Exclude numbers in password')
   .option('-ns, --no-symbols', 'Exclude symbols in password')
+  .option('-up, --uppercase', 'All characters in uppercase', false)
+  .option('-up, --lowercase', 'All characters in lowercase', false)
   .option('-s, --save <filename>', 'Save password to file')
   .parse();
 
