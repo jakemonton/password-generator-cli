@@ -53,5 +53,5 @@ const generatedPassword: string = generatePassword(options);
 clipboardy.writeSync(generatedPassword);
 
 // Log info.
-log(chalk.blue.bold('Generated Password: ' + chalk.yellow.underline.bold(generatedPassword)));
-log(chalk.green.bold('Password copied to clipboard.'));
+log(chalk.blue.bold('\nGenerated Password: ' + chalk.yellow.underline.bold(generatedPassword)) + '\n');
+log(chalk.green.bold('Password copied to clipboard.\n'));
