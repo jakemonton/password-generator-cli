@@ -3,7 +3,7 @@
 A simple password generator CLI tool written in [TypeScript](https://www.typescriptlang.org/) and [Node.JS](https://nodejs.org/).
 The newly generated password is copied to clipboard automatically.
 
-This is based from Traversy Media [tutorial video](https://www.youtube.com/watch?v=3Xx83JAktXk)
+This is based from Traversy Media [tutorial video](https://www.youtube.com/watch?v=3Xx83JAktXk).  
 And some of the password requirements are based from [https://passwordsgenerator.net](https://passwordsgenerator.net)
 
 ## Install dependencies
